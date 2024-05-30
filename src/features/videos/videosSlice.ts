@@ -16,11 +16,14 @@ const videosInitialState: VideosState = {
 };
 
 // async thunk function
-const fetchVideosAsync = createAsyncThunk("videos/fetchVideos", async () => {
-  const videos = getVideosAPI();
+export const fetchVideosAsync = createAsyncThunk(
+  "videos/fetchVideos",
+  async () => {
+    const videos = getVideosAPI();
 
-  return videos;
-});
+    return videos;
+  }
+);
 
 const videoSlice = createSlice({
   name: "videos",
