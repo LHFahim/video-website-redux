@@ -18,8 +18,8 @@ const videosInitialState: VideosState = {
 // async thunk function
 export const fetchVideosAsync = createAsyncThunk(
   "videos/fetchVideos",
-  async () => {
-    const videos = getVideosAPI();
+  async ({ tags, search }: any) => {
+    const videos = getVideosAPI(tags, search);
 
     return videos;
   }

@@ -30,8 +30,6 @@ const RelatedVideoList = ({ currentVideoId, tags }: any) => {
     ));
   }
 
-  console.log("related", videos);
-
   return (
     <div className="col-span-full lg:col-auto max-h-[570px] overflow-y-auto">
       {content}

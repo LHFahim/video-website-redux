@@ -10,10 +10,11 @@ const VideoGrid = () => {
   const { videos, isLoading, isError, error } = useSelector(
     (state: any) => state.videos
   );
+  const { tags, search } = useSelector((state: any) => state.filter);
 
   useEffect(() => {
-    dispatch(fetchVideosAsync());
-  }, [dispatch]);
+    dispatch(fetchVideosAsync({ tags, search }));
+  }, [dispatch, search, tags]);
 
   let content;
   if (isLoading) content = <Loading />;

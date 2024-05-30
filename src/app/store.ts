@@ -1,4 +1,5 @@
 import { Action, ThunkAction, configureStore } from "@reduxjs/toolkit";
+import filterSlice from "../features/filter/filterSlice";
 import relatedVideosSlice from "../features/relatedVideos/relatedVideosSlice";
 import tagsSlice from "../features/tags/tagsSlice";
 import videoSlice from "../features/video/videoSlice";
@@ -10,6 +11,7 @@ export const store = configureStore({
     tags: tagsSlice,
     videoItem: videoSlice,
     relatedVideos: relatedVideosSlice,
+    filter: filterSlice,
   },
 });
 
