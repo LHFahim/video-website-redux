@@ -1,6 +1,6 @@
 import RelatedVideoItem from "./RelatedVideoItem";
 
-const RelatedVideoList = () => {
+const RelatedVideoList = ({ currentVideoId, tags }: any) => {
   return (
     <div className="col-span-full lg:col-auto max-h-[570px] overflow-y-auto">
       {/* single related video */}
